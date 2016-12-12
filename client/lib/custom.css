@@ -1,0 +1,19 @@
+/* CSS declarations go here */
+.holder{
+  height: 600px;
+}
+
+.holder .middle {
+  height: 100%
+}
+
+.home{
+  margin-top: 30px !important;
+}
+.push-top{
+  margin-top: 10px !important;
+}
+
+body{
+  background-color: #00ACED;
+}

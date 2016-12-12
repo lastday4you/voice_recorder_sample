@@ -1,0 +1,9 @@
+<template name="detail">
+  {{#if currentUser}}
+  <div class="ui centered grid home">
+    {{#each audios}}
+      <audio controls="" src="{{fileURL this}}" class="push-top"></audio>
+    {{/each}}
+  </div>
+  {{/if}}
+</template>

@@ -1,0 +1,28 @@
+<template name="home">
+  <div class="ui centered grid home">
+    <div class="ui cube shape row" id="word">
+      <div class="sides">
+        {{#each characters}}
+          {{#if eq @index 0}}
+            <div class="active side">
+              <div class="content">
+                <div class="center">
+                  {{character}}
+                </div>
+              </div>
+            </div>
+          {{else}}
+            <div class="side">
+              <div class="content">
+                <div class="center">
+                  {{character}}
+                </div>
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+    <button class="circular ui icon button column" id="record_bt">record</button>
+  </div>
+</template>
