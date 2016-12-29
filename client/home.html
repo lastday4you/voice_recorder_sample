@@ -1,28 +1,33 @@
 <template name="home">
   <div class="ui centered grid home">
+    <button class="circular ui icon button " id="record_bt">record</button>
     <div class="ui cube shape row" id="word">
       <div class="sides">
-        {{#each characters}}
-          {{#if eq @index 0}}
-            <div class="active side">
-              <div class="content">
-                <div class="center">
-                  {{character}}
-                </div>
-              </div>
+        {{#each characters}} {{#if eq @index 0}}
+        <div class="active side">
+          <div class="content">
+            <div class="center">
+              {{character}}
             </div>
-          {{else}}
-            <div class="side">
-              <div class="content">
-                <div class="center">
-                  {{character}}
-                </div>
-              </div>
+          </div>
+        </div>
+        {{else}}
+        <div class="side">
+          <div class="content">
+            <div class="center">
+              {{character}}
             </div>
-          {{/if}}
-        {{/each}}
+          </div>
+        </div>
+        {{/if}} {{/each}}
       </div>
     </div>
-    <button class="circular ui icon button column" id="record_bt">record</button>
+    <h1>Please Speak Speaking when there is 1 second left!</h1>
+  </div>
+
+  <big>{{getCountdown}}</big> seconds left!
+  <div class="ui teal progress"  id="time-bar">
+    <div class="bar">
+    </div>
   </div>
 </template>
